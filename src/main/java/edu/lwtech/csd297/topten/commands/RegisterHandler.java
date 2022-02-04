@@ -21,7 +21,7 @@ public class RegisterHandler implements CommandHandler<TopTenListsServlet> {
 
         List<Member> registeredMembers = servlet.getMembersDAO().search(username);
         if (registeredMembers != null && !registeredMembers.isEmpty()) {
-            message = "That username is already registered here. Please use a different username.<br /><a href='?cmd=login'>Log In</a>";
+            message = "That username is already registered here. Please use a different username.<br /><a href='?cmd=showLogin'>Log In</a>";
             templateFields.put("message", message);
             return CommandUtils.mergeTemplate(template, templateFields, servlet.getFreeMarkerConfig());
         }

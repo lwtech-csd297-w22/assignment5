@@ -32,7 +32,7 @@
         <br />
 
         <#if loggedIn>
-            <a href="?cmd=addList">Add a New List</a><br />
+            <a href="?cmd=showAddList">Add a New List</a><br />
             <a href="?cmd=logout">Log Out</a>
         <#else>
             <a href="?cmd=showLogin">Log In</a><br />

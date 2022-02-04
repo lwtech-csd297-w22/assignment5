@@ -16,7 +16,7 @@ public class AddListHandler implements CommandHandler<TopTenListsServlet> {
 
         Map<String, Object> templateFields = new HashMap<>();
         CommandUtils.getSessionVariables(request, templateFields);
-        int ownerID = (int)templateFields.get("ownerID");
+        int ownerID = (int)templateFields.get("owner");
 
         TopTenList newList = CommandUtils.getTopTenListFromRequest(request, ownerID);
 
